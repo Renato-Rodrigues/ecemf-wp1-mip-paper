@@ -345,68 +345,46 @@ g <- NULL
 
 ```{r aesthetics, echo=FALSE, include=FALSE}
 
-color <- c(
-  #model
-  "Historical" = "black",
-  "mean" = "#c0c0c0",
-  "median" = "#555555",
-  "IMAGE" = "#00ffff",
-  "Euro-Calliope" = "#84eab3",
-  "PRIMES" = "#0000ff",
-  "PROMETHEUS" = "#ffd900",
-  "REMIND" = "#ff6347",
-  "TIAM-ECN" = "#4682b4",
-  "TIAM-ECN 1.2" = "#000000",
-  "WITCH" = "#228b22",
-  "LIMES" = "#ffaf47",
-  "MEESA" = "#ff00ff",
-  "OSeMBE" = "#a52a2a"
-)
+color <- color$model
 
 modelLinetype <- c(
-  "Historical" = "solid",
-  "mean" = "42", # dashed, 4 points on, one off
-  "median" = "solid",
-  "IMAGE" =       "solid" ,
+  "Historical"    = "solid",
+  "median"        = "solid",
+  "IMAGE"         = "solid",
   "Euro-Calliope" = "solid", 
-  "PRIMES" =     "solid",
-  "PROMETHEUS" = "solid",
-  "REMIND" =     "solid",
-  "TIAM-ECN" =   "solid",
-  "TIAM-ECN 1.2" = "solid",
-  "WITCH" =      "solid",
-  "LIMES" =      "solid",
-  "MEESA" =      "solid",
-  "OSeMBE" =     "solid"
+  "PRIMES"        = "solid",
+  "PROMETHEUS"    = "solid",
+  "REMIND"        = "solid",
+  "TIAM-ECN"      = "solid",
+  "WITCH"         = "solid",
+  "LIMES"         = "solid",
+  "MEESA"         = "solid",
+  "OSeMBE"        = "solid"
 )
 
 modelAlpha <- c(
-  "Historical" =      1,
-  "mean" =            1,
-  "median" =          1,
-  "IMAGE" =         0.5,
+  "Historical"    = 1,
+  "median"        = 1,
+  "IMAGE"         = 0.5,
   "Euro-Calliope" = 0.5,
-  "PRIMES" =        0.5,
-  "PROMETHEUS" =    0.5,
-  "REMIND" =        0.5,
-  "TIAM-ECN" =      0.5,
-  "TIAM-ECN 1.2" =  0.5,
-  "WITCH" =         0.5, 
-  "LIMES" =         0.5,
-  "MEESA" =         0.5,
-  "OSeMBE" =        0.5
+  "PRIMES"        = 0.5,
+  "PROMETHEUS"    = 0.5,
+  "REMIND"        = 0.5,
+  "TIAM-ECN"      = 0.5,
+  "WITCH"         = 0.5, 
+  "LIMES"         = 0.5,
+  "MEESA"         = 0.5,
+  "OSeMBE"        = 0.5
 )
 
 modelsOrder <- c(
   "Historical",
-  "mean",
   "median",
   "OSeMBE",
   "MEESA",
   "LIMES",
   "WITCH",
   "TIAM-ECN",
-  "TIAM-ECN 1.2",
   "REMIND",
   "PROMETHEUS",
   "PRIMES",
@@ -416,7 +394,6 @@ modelsOrder <- c(
 
 modelShape <- c(
   "Historical"    = NA, 
-  "mean"          = NA, 
   "median"        = 21,
   "IMAGE"         = 21,
   "Euro-Calliope" = 4, 
@@ -424,8 +401,7 @@ modelShape <- c(
   "PROMETHEUS"    = 21, 
   "REMIND"        = 21, 
   "TIAM-ECN"      = 21, 
-  "TIAM-ECN 1.2"  = 21, 
-  "WITCH"         = 21,
+  "WITCH"         = 21, 
   "LIMES"         = 23, 
   "MEESA"         = 23, 
   "OSeMBE"        = 23 
@@ -1469,25 +1445,32 @@ g[["Carbon Price"]] <- ggplot(plotData,aes(x=period,y=value)) +
   annotate("text", x = 2019.5, y = 600, label = "Historical", hjust = 0.5, vjust = 0.5, size = 15/.pt, color = "#888888") + # historical text
   geom_hline(yintercept=0, color = "black", linewidth= def$yAxis$linewidth, alpha = def$yAxis$alpha) + # y-axis zero
   geom_line(data=plotData %>% filter((!(model %in% c("Historical", "median")))), size=def$model$lineSize,aes(color=model,linetype=model, alpha = model)) + # models data
-  geom_point(data = plotData %>% filter(model != "median", period > 2023), shape = def$model$shape, aes(colour = model, shape = model), fill = "white", size = def$model$pointSize, stroke = def$model$pointStroke) +
+  geom_point(data = plotData %>% filter(model != "median", period > 2023), aes(colour = model, shape = model), fill = "white", size = def$model$pointSize, stroke = def$model$pointStroke) +
   geom_line(data=plotData %>% filter(model == "median"), size=def$median$lineSize,aes(color=model,linetype=model, alpha = model)) + # models data
-  geom_point(data = plotData %>% filter(model == "median"), shape = def$median$shape, aes(colour = model, shape = model), fill = "white", size = def$median$pointSize, stroke = def$median$pointStroke) +
+  geom_point(data = plotData %>% filter(model == "median"), aes(colour = model, shape = model), fill = "white", size = def$median$pointSize, stroke = def$median$pointStroke) +
   theme_paper() +
   scale_color_manual(name = "legend", values = setNames(color[levels(plotData$model)],levels(plotData$model)), guide = guide_legend(nrow = 2)) +
   scale_alpha_manual(values = modelAlpha) +
   scale_linetype_manual(values = modelLinetype) +
-  scale_shape_manual(name = "legend", values = modelShape, guide = guide_legend(ncol = 1)) +
+  scale_shape_manual(name = "legend", values = setNames(modelShape[levels(plotData$model)], levels(plotData$model)), guide = guide_legend(nrow = 2)) +
   labs(title = expression(paste("(a) Carbon Price")), subtitle = expression(paste("€/t", CO[2]))) + 
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_continuous(breaks = seq(0, 800, by = 200), limits = c(0,950), expand = c(0, 0)) +
   coord_cartesian(clip = 'off') + 
   theme(legend.position = "bottom",
-        legend.key.height = unit(1, 'cm'),
-        plot.margin = margin(r = 50, l = 20),
-        #legend.margin = margin(l = 50),
+        legend.key.width = unit(0.7, 'cm'),
+        legend.key.height = unit(0.6, 'cm'),
+        legend.spacing.x = unit(0.2, 'cm'),
+        legend.text = element_text(size = 11, margin = margin(r = 6, unit = "pt")),
+        plot.margin = margin(r = 20, l = 20),
         strip.text = element_blank()
   ) +
-  guides(alpha = "none", linetype = "none")
+  guides(
+    color = guide_legend(nrow = 2, order = 1),
+    shape = guide_legend(nrow = 2, order = 1),
+    alpha = "none",
+    linetype = "none"
+  )
 
 ```
 
@@ -1523,6 +1506,7 @@ g[["Carbon Price"]] <- ggplot(plotData,aes(x=period,y=value)) +
       seed = 42
     ) +
     theme_paper() +
+    scale_colour_manual(values = setNames(color[levels(plotData$model)], levels(plotData$model))) +
     scale_y_continuous(labels = scales::label_number(accuracy = 0.1), breaks = seq(0, 1.4, by = 0.5), limits = c(0,1.4)) +
     scale_x_continuous(limits = c(-0.6, 0.6)) + #, expand = expansion(mult = 0.2)) +
     theme(
@@ -1546,8 +1530,8 @@ g[["Figure 6"]] <- gridExtra::arrangeGrob(
   layout_matrix = rbind(c(1,1,1,2))
    )
 
-ggsave(paste0(outFolder, "/png/Figure 6. Economic indicators.png"), g[["Figure 6"]], device="png", width = 12, height = 6, dpi=300, units = "in")
-ggsave(paste0(outFolder, "/svg/Figure 6. Economic indicators.svg"), g[["Figure 6"]], device="svg", width = 12, height = 6, dpi=100, units = "in")
+ggsave(paste0(outFolder, "/png/Figure 6. Economic indicators.png"), plot = g[["Figure 6"]], device="png", width = 12, height = 6, dpi=300, units = "in")
+ggsave(paste0(outFolder, "/svg/Figure 6. Economic indicators.svg"), plot = g[["Figure 6"]], device="svg", width = 12, height = 6, dpi=100, units = "in")
 
 ```
 

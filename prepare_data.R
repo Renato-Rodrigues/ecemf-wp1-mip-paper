@@ -10,6 +10,25 @@ library(quitte)
 modelsFullSystem <- c("IMAGE", "PRIMES", "PROMETHEUS", "REMIND", "TIAM-ECN", "WITCH")
 modelsElecall <- c("IMAGE", "LIMES", "MEESA", "OSeMBE", "PRIMES", "PROMETHEUS", "REMIND", "TIAM-ECN", "WITCH", "Euro-Calliope")
 
+color <- list(
+  "model" = c(
+    #model
+    "Historical"    = "black",
+    "median"        = "#555555",
+    "IMAGE"         = "#00ffff",
+    "Euro-Calliope" = "#84eab3",
+    "PRIMES"        = "#0000ff",
+    "PROMETHEUS"    = "#ffd900",
+    "REMIND"        = "#ff6347",
+    "TIAM-ECN"      = "#4682b4",
+    "WITCH"         = "#228b22",
+    "LIMES"         = "#ffaf47",
+    "MEESA"         = "#ff00ff",
+    "OSeMBE"        = "#a52a2a"
+  )
+)
+
+
 df <- suppressWarnings(quitte::read.quitte("./data/WP1_iiasa_2026_08_03.xlsx")) %>%
   filter(!is.na(value))
 
