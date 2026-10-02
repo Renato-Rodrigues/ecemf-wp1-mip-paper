@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: >-
+  If you use this code or data, please cite the paper (preferred citation)
+  and this repository. When using the REMIND results, please also cite
+  REMIND v3.6.0.
+type: software
+title: "ecemf-wp1-mip-paper: data and code for 'Milestones to Net Zero: Intermodel insights on the EU's 2040 climate targets'"
+abstract: >-
+  Companion repository to the ECEMF Work Package 1 model intercomparison
+  paper. It contains the scenario results of ten energy-system and integrated
+  assessment models (from the IIASA ECEMF Scenario Explorer), historical
+  reference data, and the R code that computes all numbers quoted in the
+  manuscript and draws all figures.
+authors:
+  - family-names: "Rodrigues"
+    given-names: "Renato"
+    orcid: "https://orcid.org/0000-0002-5863-5514"
+    affiliation: "Potsdam Institute for Climate Impact Research"
+  - family-names: "Pietzcker"
+    given-names: "Robert"
+    orcid: "https://orcid.org/0000-0002-9403-6711"
+    affiliation: "Potsdam Institute for Climate Impact Research"
+repository-code: "https://github.com/Renato-Rodrigues/ecemf-wp1-mip-paper"
+license: AGPL-3.0-or-later
+keywords:
+  - model intercomparison
+  - ECEMF
+  - REMIND
+  - European Union
+  - 2040 climate target
+  - net zero
+# Add after archiving the release on Zenodo:
+# doi: "10.5281/zenodo.XXXXXXX"
+preferred-citation:
+  type: article
+  title: "Milestones to Net Zero: Intermodel insights on the EU's 2040 climate targets"
+  authors:
+    - family-names: "Pietzcker"
+      given-names: "Robert"
+      orcid: "https://orcid.org/0000-0002-9403-6711"
+  # Complete the author list, journal, year and DOI on acceptance.
+references:
+  - type: software
+    title: "REMIND - REgional Model of INvestments and Development"
+    version: "3.6.0"
+    date-released: 2026-03-27
+    doi: "10.5281/zenodo.19258991"
+    repository-code: "https://github.com/remindmodel/remind"
+    license: AGPL-3.0-or-later
+    authors:
+      - name: "REMIND developer team, Potsdam Institute for Climate Impact Research"
+  - type: database
+    title: "ECEMF Scenario Explorer"
+    url: "https://ecemf.apps.ece.iiasa.ac.at"
+    authors:
+      - name: "International Institute for Applied Systems Analysis (IIASA)"
