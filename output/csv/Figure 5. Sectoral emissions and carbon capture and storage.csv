@@ -1,0 +1,117 @@
+"figure","title","series","unit","2010","2015","2020","2025","2030","2035","2040","2045","2050"
+"Figure 5a","Emissions per sector: Demand - Bunkers","Historical","Mt CO2eq/yr",,,198,,,,,,
+"Figure 5a","Emissions per sector: Demand - Bunkers","Historical (5yr average)","Mt CO2eq/yr",,,263,,,,,,
+"Figure 5a","Emissions per sector: Demand - Bunkers","IMAGE","Mt CO2eq/yr",,,287,,328,,183,,98
+"Figure 5a","Emissions per sector: Demand - Bunkers","PRIMES","Mt CO2eq/yr",,,174,,278,,195,,34
+"Figure 5a","Emissions per sector: Demand - Bunkers","PROMETHEUS","Mt CO2eq/yr",,,142,,160,,90,,31
+"Figure 5a","Emissions per sector: Demand - Bunkers","REMIND","Mt CO2eq/yr",,,271,,244,,197,,96
+"Figure 5a","Emissions per sector: Demand - Bunkers","TIAM-ECN","Mt CO2eq/yr",,,155,,152,,6,,0
+"Figure 5a","Emissions per sector: Demand - Bunkers","WITCH","Mt CO2eq/yr",,,175,,197,,91,,0
+"Figure 5a","Emissions per sector: non-CO2","Historical","Mt CO2eq/yr",,,681,,,,,,
+"Figure 5a","Emissions per sector: non-CO2","Historical (5yr average)","Mt CO2eq/yr",,,683,,,,,,
+"Figure 5a","Emissions per sector: non-CO2","IMAGE","Mt CO2eq/yr",,,683,,580,,520,,510
+"Figure 5a","Emissions per sector: non-CO2","PRIMES","Mt CO2eq/yr",,,683,,580,,520,,510
+"Figure 5a","Emissions per sector: non-CO2","PROMETHEUS","Mt CO2eq/yr",,,683,,580,,520,,510
+"Figure 5a","Emissions per sector: non-CO2","REMIND","Mt CO2eq/yr",,,765,,609,,564,,538
+"Figure 5a","Emissions per sector: non-CO2","TIAM-ECN","Mt CO2eq/yr",,,735,,560,,570,,524
+"Figure 5a","Emissions per sector: non-CO2","WITCH","Mt CO2eq/yr",,,790,,550,,507,,489
+"Figure 5a","Emissions per sector: other CO2","PRIMES","Mt CO2eq/yr",,,31,,15,,8,,5
+"Figure 5a","Emissions per sector: other CO2","PROMETHEUS","Mt CO2eq/yr",,,0,,0,,0,,0
+"Figure 5a","Emissions per sector: Demand - AFOFI","IMAGE","Mt CO2eq/yr",,,102,,106,,68,,37
+"Figure 5a","Emissions per sector: Demand - AFOFI","PRIMES","Mt CO2eq/yr",,,0,,0,,0,,0
+"Figure 5a","Emissions per sector: Demand - AFOFI","PROMETHEUS","Mt CO2eq/yr",,,0,,0,,0,,0
+"Figure 5a","Emissions per sector: Demand - AFOFI","TIAM-ECN","Mt CO2eq/yr",,,66,,74,,32,,10
+"Figure 5a","Emissions per sector: Demand - AFOFI","WITCH","Mt CO2eq/yr",,,68,,47,,24,,13
+"Figure 5a","Emissions per sector: Demand - Buildings","Historical","Mt CO2eq/yr",,,508,,,,,,
+"Figure 5a","Emissions per sector: Demand - Buildings","Historical (5yr average)","Mt CO2eq/yr",,,506,,,,,,
+"Figure 5a","Emissions per sector: Demand - Buildings","IMAGE","Mt CO2eq/yr",,,508,,313,,62,,40
+"Figure 5a","Emissions per sector: Demand - Buildings","PRIMES","Mt CO2eq/yr",,,561,,248,,115,,9
+"Figure 5a","Emissions per sector: Demand - Buildings","PROMETHEUS","Mt CO2eq/yr",,,564,,285,,86,,46
+"Figure 5a","Emissions per sector: Demand - Buildings","REMIND","Mt CO2eq/yr",,,476,,396,,229,,89
+"Figure 5a","Emissions per sector: Demand - Buildings","TIAM-ECN","Mt CO2eq/yr",,,546,,553,,570,,267
+"Figure 5a","Emissions per sector: Demand - Buildings","WITCH","Mt CO2eq/yr",,,531,,397,,213,,169
+"Figure 5a","Emissions per sector: Demand - Industry","Historical","Mt CO2eq/yr",,,429,,,,,,
+"Figure 5a","Emissions per sector: Demand - Industry","Historical (5yr average)","Mt CO2eq/yr",,,446,,,,,,
+"Figure 5a","Emissions per sector: Demand - Industry","IMAGE","Mt CO2eq/yr",,,301,,204,,134,,62
+"Figure 5a","Emissions per sector: Demand - Industry","PRIMES","Mt CO2eq/yr",,,350,,223,,70,,5
+"Figure 5a","Emissions per sector: Demand - Industry","PROMETHEUS","Mt CO2eq/yr",,,370,,294,,165,,114
+"Figure 5a","Emissions per sector: Demand - Industry","REMIND","Mt CO2eq/yr",,,561,,424,,129,,44
+"Figure 5a","Emissions per sector: Demand - Industry","TIAM-ECN","Mt CO2eq/yr",,,561,,499,,107,,73
+"Figure 5a","Emissions per sector: Demand - Industry","WITCH","Mt CO2eq/yr",,,388,,290,,152,,113
+"Figure 5a","Emissions per sector: Industrial Processes","Historical","Mt CO2eq/yr",,,245,,,,,,
+"Figure 5a","Emissions per sector: Industrial Processes","Historical (5yr average)","Mt CO2eq/yr",,,254,,,,,,
+"Figure 5a","Emissions per sector: Industrial Processes","IMAGE","Mt CO2eq/yr",,,16,,180,,157,,134
+"Figure 5a","Emissions per sector: Industrial Processes","PRIMES","Mt CO2eq/yr",,,243,,203,,25,,5
+"Figure 5a","Emissions per sector: Industrial Processes","REMIND","Mt CO2eq/yr",,,111,,115,,68,,34
+"Figure 5a","Emissions per sector: Industrial Processes","WITCH","Mt CO2eq/yr",,,433,,175,,-25,,-72
+"Figure 5a","Emissions per sector: Demand - Transport","Historical","Mt CO2eq/yr",,,810,,,,,,
+"Figure 5a","Emissions per sector: Demand - Transport","Historical (5yr average)","Mt CO2eq/yr",,,897,,,,,,
+"Figure 5a","Emissions per sector: Demand - Transport","IMAGE","Mt CO2eq/yr",,,816,,712,,369,,106
+"Figure 5a","Emissions per sector: Demand - Transport","PRIMES","Mt CO2eq/yr",,,797,,747,,240,,9
+"Figure 5a","Emissions per sector: Demand - Transport","PROMETHEUS","Mt CO2eq/yr",,,1028,,691,,309,,138
+"Figure 5a","Emissions per sector: Demand - Transport","REMIND","Mt CO2eq/yr",,,878,,623,,172,,12
+"Figure 5a","Emissions per sector: Demand - Transport","TIAM-ECN","Mt CO2eq/yr",,,1053,,1108,,675,,40
+"Figure 5a","Emissions per sector: Demand - Transport","WITCH","Mt CO2eq/yr",,,895,,658,,446,,9
+"Figure 5a","Emissions per sector: Energy Supply - Other","Historical","Mt CO2eq/yr",,,111,,,,,,
+"Figure 5a","Emissions per sector: Energy Supply - Other","Historical (5yr average)","Mt CO2eq/yr",,,110,,,,,,
+"Figure 5a","Emissions per sector: Energy Supply - Other","IMAGE","Mt CO2eq/yr",,,6,,6,,-10,,-27
+"Figure 5a","Emissions per sector: Energy Supply - Other","PRIMES","Mt CO2eq/yr",,,62,,27,,15,,10
+"Figure 5a","Emissions per sector: Energy Supply - Other","PROMETHEUS","Mt CO2eq/yr",,,158,,232,,59,,45
+"Figure 5a","Emissions per sector: Energy Supply - Solids","Historical","Mt CO2eq/yr",,,47,,,,,,
+"Figure 5a","Emissions per sector: Energy Supply - Solids","Historical (5yr average)","Mt CO2eq/yr",,,48,,,,,,
+"Figure 5a","Emissions per sector: Energy Supply - Solids","IMAGE","Mt CO2eq/yr",,,94,,65,,38,,23
+"Figure 5a","Emissions per sector: Energy Supply - Solids","PRIMES","Mt CO2eq/yr",,,0,,0,,0,,0
+"Figure 5a","Emissions per sector: Energy Supply - Solids","REMIND","Mt CO2eq/yr",,,50,,4,,2,,1
+"Figure 5a","Emissions per sector: Energy Supply - Solids","TIAM-ECN","Mt CO2eq/yr",,,0,,0,,0,,0
+"Figure 5a","Emissions per sector: Energy Supply - Liquids","Historical","Mt CO2eq/yr",,,102,,,,,,
+"Figure 5a","Emissions per sector: Energy Supply - Liquids","Historical (5yr average)","Mt CO2eq/yr",,,107,,,,,,
+"Figure 5a","Emissions per sector: Energy Supply - Liquids","IMAGE","Mt CO2eq/yr",,,104,,96,,49,,35
+"Figure 5a","Emissions per sector: Energy Supply - Liquids","PRIMES","Mt CO2eq/yr",,,80,,39,,14,,6
+"Figure 5a","Emissions per sector: Energy Supply - Liquids","REMIND","Mt CO2eq/yr",,,143,,123,,61,,23
+"Figure 5a","Emissions per sector: Energy Supply - Liquids","TIAM-ECN","Mt CO2eq/yr",,,108,,59,,28,,13
+"Figure 5a","Emissions per sector: Energy Supply - Liquids","WITCH","Mt CO2eq/yr",,,5,,10,,4,,1
+"Figure 5a","Emissions per sector: Energy Supply - Gases","IMAGE","Mt CO2eq/yr",,,57,,35,,15,,11
+"Figure 5a","Emissions per sector: Energy Supply - Gases","PRIMES","Mt CO2eq/yr",,,0,,0,,0,,0
+"Figure 5a","Emissions per sector: Energy Supply - Gases","REMIND","Mt CO2eq/yr",,,61,,72,,41,,24
+"Figure 5a","Emissions per sector: Energy Supply - Gases","TIAM-ECN","Mt CO2eq/yr",,,60,,7,,18,,16
+"Figure 5a","Emissions per sector: Energy Supply - Heat","IMAGE","Mt CO2eq/yr",,,203,,186,,51,,4
+"Figure 5a","Emissions per sector: Energy Supply - Heat","PRIMES","Mt CO2eq/yr",,,33,,5,,0,,0
+"Figure 5a","Emissions per sector: Energy Supply - Heat","REMIND","Mt CO2eq/yr",,,132,,42,,2,,0
+"Figure 5a","Emissions per sector: Energy Supply - Heat","TIAM-ECN","Mt CO2eq/yr",,,14,,15,,0,,2
+"Figure 5a","Emissions per sector: Energy Supply - Electricity","Historical","Mt CO2eq/yr",,,695,,,,,,
+"Figure 5a","Emissions per sector: Energy Supply - Electricity","Historical (5yr average)","Mt CO2eq/yr",,,801,,,,,,
+"Figure 5a","Emissions per sector: Energy Supply - Electricity","IMAGE","Mt CO2eq/yr",,,742,,409,,69,,4
+"Figure 5a","Emissions per sector: Energy Supply - Electricity","PRIMES","Mt CO2eq/yr",,,698,,235,,23,,10
+"Figure 5a","Emissions per sector: Energy Supply - Electricity","PROMETHEUS","Mt CO2eq/yr",,,776,,259,,45,,29
+"Figure 5a","Emissions per sector: Energy Supply - Electricity","REMIND","Mt CO2eq/yr",,,767,,195,,33,,20
+"Figure 5a","Emissions per sector: Energy Supply - Electricity","TIAM-ECN","Mt CO2eq/yr",,,714,,27,,2,,0
+"Figure 5a","Emissions per sector: Energy Supply - Electricity","WITCH","Mt CO2eq/yr",,,855,,247,,1,,0
+"Figure 5a","Emissions per sector: LULUCF","Historical","Mt CO2eq/yr",,,-272,,,,,,
+"Figure 5a","Emissions per sector: LULUCF","Historical (5yr average)","Mt CO2eq/yr",,,-275,,,,,,
+"Figure 5a","Emissions per sector: LULUCF","IMAGE","Mt CO2eq/yr",,,-275,,-308,,-310,,-331
+"Figure 5a","Emissions per sector: LULUCF","PRIMES","Mt CO2eq/yr",,,-275,,-310,,-310,,-310
+"Figure 5a","Emissions per sector: LULUCF","PROMETHEUS","Mt CO2eq/yr",,,-275,,-310,,-310,,-310
+"Figure 5a","Emissions per sector: LULUCF","REMIND","Mt CO2eq/yr",,,-275,,-327,,-537,,-455
+"Figure 5a","Emissions per sector: LULUCF","TIAM-ECN","Mt CO2eq/yr",,,-275,,-289,,-303,,-499
+"Figure 5a","Emissions per sector: LULUCF","WITCH","Mt CO2eq/yr",,,-275,,-268,,-263,,-261
+"Figure 5a","Emissions per sector: Geological Carbon Removal","IMAGE","Mt CO2eq/yr",,,0,,0,,-264,,-644
+"Figure 5a","Emissions per sector: Geological Carbon Removal","PRIMES","Mt CO2eq/yr",,,0,,0,,-28,,-200
+"Figure 5a","Emissions per sector: Geological Carbon Removal","PROMETHEUS","Mt CO2eq/yr",,,0,,0,,-120,,-470
+"Figure 5a","Emissions per sector: Geological Carbon Removal","REMIND","Mt CO2eq/yr",,,0,,-18,,-207,,-366
+"Figure 5a","Emissions per sector: Geological Carbon Removal","TIAM-ECN","Mt CO2eq/yr",,,0,,-16,,-200,,-535
+"Figure 5a","Emissions per sector: Geological Carbon Removal","WITCH","Mt CO2eq/yr",,,0,,0,,-136,,-406
+"Figure 5a","Emissions per sector: Total net Kyoto gases","Historical","Mt CO2eq/yr",,,3571,,,,,,
+"Figure 5a","Emissions per sector: Total net Kyoto gases","Historical (5yr average)","Mt CO2eq/yr",,,3856,,,,,,
+"Figure 5a","Emissions per sector: Total net Kyoto gases","IMAGE","Mt CO2eq/yr",,,3438,,2646,,989,,5
+"Figure 5a","Emissions per sector: Total net Kyoto gases","PRIMES","Mt CO2eq/yr",,,3466,,2292,,889,,93
+"Figure 5a","Emissions per sector: Total net Kyoto gases","PROMETHEUS","Mt CO2eq/yr",,,3661,,2194,,882,,154
+"Figure 5a","Emissions per sector: Total net Kyoto gases","REMIND","Mt CO2eq/yr",,,3976,,2544,,763,,30
+"Figure 5a","Emissions per sector: Total net Kyoto gases","TIAM-ECN","Mt CO2eq/yr",,,3741,,2751,,1505,,-87
+"Figure 5a","Emissions per sector: Total net Kyoto gases","WITCH","Mt CO2eq/yr",,,3863,,2302,,1015,,55
+"Figure 5b","Carbon capture","median","Mt CO2/yr",0,0,0,1,9,74,281,464,593
+"Figure 5b","Carbon capture","IMAGE","Mt CO2/yr",0,0,0,0,0,24,369,834,1035
+"Figure 5b","Carbon capture","PRIMES","Mt CO2/yr",0,0,0,1,17,142,307,523,651
+"Figure 5b","Carbon capture","PROMETHEUS","Mt CO2/yr",0,0,0,0,1,1,120,322,471
+"Figure 5b","Carbon capture","REMIND","Mt CO2/yr",0,0,1,4,37,158,296,405,476
+"Figure 5b","Carbon capture","TIAM-ECN","Mt CO2/yr",,,0,10,79,125,200,350,535
+"Figure 5b","Carbon capture","WITCH","Mt CO2/yr",0,0,0,0,2,15,266,709,684

@@ -26,6 +26,9 @@ prepare_data.R                   reads both files and derives the variables the 
 paperFigures.Rmd                 results table, then the nine published figures
 paperFigures.html                rendered output of paperFigures.Rmd (results table plus figures)
 output/png, output/svg           the figures, written on every render
+output/Figures.pdf               all figures in vector format, one page per figure
+output/csv                       one csv per figure with the data it plots (long format: figure,
+                                 panel, model, scenario, region, variable, category, unit, period, value)
 renv.lock                        exact versions of R and of every R package used for testing
 LICENSE                          GNU AGPL v3 (code)
 CITATION.cff                     citation metadata for this repository
@@ -52,8 +55,9 @@ CITATION.cff                     citation metadata for this repository
 | readxl | 1.5.0 | CRAN (used by `quitte` to read the xlsx file) |
 | quitte | 0.3151.0 | PIK, <https://github.com/pik-piam/quitte> (`calc_addVariable`, `calcCumulatedDiscount`, `read.quitte`, …) |
 | mip | 0.155.14 | PIK, <https://github.com/pik-piam/mip> (model and technology colour styles) |
+| qpdf | 1.3.5 | CRAN (joins the per-figure pdf pages into `output/Figures.pdf`) |
 
-`grid` ships with R. The complete dependency tree (119 packages, with versions and source repositories) is pinned in [`renv.lock`](renv.lock).
+`grid` ships with R. The complete dependency tree (120 packages, with versions and source repositories) is pinned in [`renv.lock`](renv.lock).
 
 ### Operating systems
 

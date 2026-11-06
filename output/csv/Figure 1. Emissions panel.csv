@@ -1,0 +1,35 @@
+"figure","title","series","unit","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2030","2035","2040","2045","2050"
+"Figure 1a","Net GHG emissions","Historical","Mt CO2eq/yr",5575,5377,5240,5129,5102,5123,5213,5135,5095,4990,5043,5052,5045,5140,5112,5097,5100,5095,4933,4533,4620,4472,4407,4285,4116,4166,4152,4249,4170,4014,3571,3778,3747,,,,,,,,
+"Figure 1a","Net GHG emissions","median","Mt CO2eq/yr",,,,,,,,,,,,,,,,,,,,,4677,,,,,4279,,,,,3701,,,,,3120,2423,1609,939,386,43
+"Figure 1a","Net GHG emissions","IMAGE","Mt CO2eq/yr",,,,,,,,,,,,,,,,,,,,,4711,,,,,4202,,,,,3438,,,,,3258,2646,1826,989,335,5
+"Figure 1a","Net GHG emissions","PRIMES","Mt CO2eq/yr",,,,,,,,,,,,,,,,,,,,,4732,,,,,4303,,,,,3466,,,,,3139,2292,1559,889,402,93
+"Figure 1a","Net GHG emissions","PROMETHEUS","Mt CO2eq/yr",,,,,,,,,,,,,,,,,,,,,4475,,,,,4034,,,,,3661,,,,,3082,2194,1383,882,463,154
+"Figure 1a","Net GHG emissions","REMIND","Mt CO2eq/yr",,,,,,,,,,,,,,,,,,,,,4623,,,,,4294,,,,,3976,,,,,3427,2544,1520,763,307,30
+"Figure 1a","Net GHG emissions","TIAM-ECN","Mt CO2eq/yr",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3741,,,,,3101,2751,1941,1505,589,-87
+"Figure 1a","Net GHG emissions","WITCH","Mt CO2eq/yr",,,,,,,,,,,,,,,,,,,,,4677,,,,,4279,,,,,3863,,,,,2969,2302,1659,1015,370,55
+"Figure 1a","Net GHG emissions: average annual change over the preceding decade","Historical","% of 1990 value per year",,,,,,,,,,,-1,,,,,,,,,,-0.8,,,,,,,,,,-1.9,,,,,,,,,,
+"Figure 1a","Net GHG emissions: average annual change over the preceding decade","median","% of 1990 value per year",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-2.1,,-2.7,,-1.6
+"Figure 1b","Net CO2 emissions - energy and industrial processes","Historical","Mt CO2/yr",4635,4578,4444,4366,4345,4388,4506,4430,4439,4379,4412,4482,4468,4564,4592,4592,4624,4579,4490,4115,4226,4090,4024,3925,3748,3790,3777,3802,3738,3581,3148,3359,3342,,,,,,,,
+"Figure 1b","Net CO2 emissions - energy and industrial processes","median","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,4085,,,,,3730,,,,,3267,,,,,2830,2127,1427,754,268,-79
+"Figure 1b","Net CO2 emissions - energy and industrial processes","IMAGE","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,4167,,,,,3709,,,,,3030,,,,,2914,2374,1586,779,130,-174
+"Figure 1b","Net CO2 emissions - energy and industrial processes","PRIMES","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,4300,,,,,3892,,,,,3027,,,,,2768,2008,1309,671,191,-112
+"Figure 1b","Net CO2 emissions - energy and industrial processes","PROMETHEUS","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,4085,,,,,3663,,,,,3252,,,,,2732,1924,1143,672,258,-46
+"Figure 1b","Net CO2 emissions - energy and industrial processes","REMIND","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,4052,,,,,3749,,,,,3454,,,,,2949,2233,1456,730,279,-37
+"Figure 1b","Net CO2 emissions - energy and industrial processes","TIAM-ECN","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3281,,,,,2893,2479,1686,1238,491,-112
+"Figure 1b","Net CO2 emissions - energy and industrial processes","WITCH","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,4085,,,,,3730,,,,,3348,,,,,2594,2020,1399,899,528,228
+"Figure 1b","Net CO2 emissions - energy and industrial processes: average annual change over the preceding decade","Historical","% of 1990 value per year",,,,,,,,,,,-0.5,,,,,,,,,,-0.4,,,,,,,,,,-2.3,,,,,,,,,,
+"Figure 1b","Net CO2 emissions - energy and industrial processes: average annual change over the preceding decade","median","% of 1990 value per year",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-2.2,,-3,,-1.8
+"Figure 1c","Net CO2 emissions from electricity generation","Historical","Mt CO2/yr",,,,,,,,,,,1275,1286,1322,1378,1366,1367,1390,1406,1342,1226,1242,1235,1225,1157,1068,1075,1040,1036,966,848,726,794,822,636,570,,,,,,
+"Figure 1c","Net CO2 emissions from electricity generation","median","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,1275,,,,,1069,,,,,742,,,,,503,235,64,-34,-134,-205
+"Figure 1c","Net CO2 emissions from electricity generation","Euro-Calliope","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,706,,,,,,,,,,13
+"Figure 1c","Net CO2 emissions from electricity generation","IMAGE","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,1353,,,,,1198,,,,,742,,,,,564,409,168,-143,-445,-507
+"Figure 1c","Net CO2 emissions from electricity generation","LIMES","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,1240,,,,,1063,,,,,778,,,,,560,209,41,-55,-164,-205
+"Figure 1c","Net CO2 emissions from electricity generation","MEESA","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,725,,,,,572,235,127,-34,-134,-207
+"Figure 1c","Net CO2 emissions from electricity generation","OSeMBE","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,,,,,,1069,,,,,715,,,,,498,135,72,2,-68,-195
+"Figure 1c","Net CO2 emissions from electricity generation","PRIMES","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,1310,,,,,1145,,,,,724,,,,,397,236,122,-5,-71,-142
+"Figure 1c","Net CO2 emissions from electricity generation","PROMETHEUS","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,1158,,,,,971,,,,,776,,,,,534,259,28,-97,-277,-395
+"Figure 1c","Net CO2 emissions from electricity generation","REMIND","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,1164,,,,,966,,,,,767,,,,,503,193,64,21,3,-7
+"Figure 1c","Net CO2 emissions from electricity generation","TIAM-ECN","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,714,,,,,447,22,-104,-194,-346,-532
+"Figure 1c","Net CO2 emissions from electricity generation","WITCH","Mt CO2/yr",,,,,,,,,,,,,,,,,,,,,1336,,,,,1136,,,,,855,,,,,380,247,27,-8,-6,-5
+"Figure 1c","Net CO2 emissions from electricity generation: average annual change over the preceding decade","Historical","% of 2000 value per year",,,,,,,,,,,,,,,,,,,,,-0.3,,,,,,,,,,-4.1,,,,,,,,,,
+"Figure 1c","Net CO2 emissions from electricity generation: average annual change over the preceding decade","median","% of 2000 value per year",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-3.8,,-2.1,,-1.3

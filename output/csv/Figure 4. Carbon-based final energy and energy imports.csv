@@ -1,0 +1,76 @@
+"figure","title","series","unit","2020","2030","2040","2050"
+"Figure 4a","Carbon-based final energy: Synfuel - Gases","PRIMES","EJ/yr",0,0,0.64,2.16
+"Figure 4a","Carbon-based final energy: Synfuel - Gases","REMIND","EJ/yr",0,0,0,0
+"Figure 4a","Carbon-based final energy: Synfuel - Liquids","PRIMES","EJ/yr",0,0.17,0.99,1.97
+"Figure 4a","Carbon-based final energy: Synfuel - Liquids","REMIND","EJ/yr",0,0.01,0.13,2.37
+"Figure 4a","Carbon-based final energy: Synfuel - Liquids","WITCH","EJ/yr",0,0.02,0,0.99
+"Figure 4a","Carbon-based final energy: Biomass - Gases","PRIMES","EJ/yr",0.09,0.16,0.43,0.92
+"Figure 4a","Carbon-based final energy: Biomass - Gases","REMIND","EJ/yr",0.13,0.27,0.64,0.81
+"Figure 4a","Carbon-based final energy: Biomass - Gases","TIAM-ECN","EJ/yr",0,0.14,0.09,0.29
+"Figure 4a","Carbon-based final energy: Biomass - Gases","WITCH","EJ/yr",0.11,0.11,0.11,0.11
+"Figure 4a","Carbon-based final energy: Biomass - Liquids","IMAGE","EJ/yr",0.96,1.65,3.97,6.04
+"Figure 4a","Carbon-based final energy: Biomass - Liquids","PRIMES","EJ/yr",0.75,1.11,1.63,1.92
+"Figure 4a","Carbon-based final energy: Biomass - Liquids","REMIND","EJ/yr",1.18,1.92,2.54,3.26
+"Figure 4a","Carbon-based final energy: Biomass - Liquids","TIAM-ECN","EJ/yr",0.72,0.44,2.09,3.32
+"Figure 4a","Carbon-based final energy: Biomass - Liquids","WITCH","EJ/yr",0.76,1.2,2.26,7.3
+"Figure 4a","Carbon-based final energy: Biomass - Solids","IMAGE","EJ/yr",3.33,2.75,2.02,2.02
+"Figure 4a","Carbon-based final energy: Biomass - Solids","PRIMES","EJ/yr",2.91,2.51,2.09,1.69
+"Figure 4a","Carbon-based final energy: Biomass - Solids","REMIND","EJ/yr",3.66,2.91,1.81,1.04
+"Figure 4a","Carbon-based final energy: Biomass - Solids","TIAM-ECN","EJ/yr",1.94,4.67,2.59,3.91
+"Figure 4a","Carbon-based final energy: Biomass - Solids","WITCH","EJ/yr",2.97,1.08,0.5,0.25
+"Figure 4a","Carbon-based final energy: Fossils - Gases","IMAGE","EJ/yr",10.99,7.11,3.95,3.5
+"Figure 4a","Carbon-based final energy: Fossils - Gases","PRIMES","EJ/yr",10.02,7.1,4.08,0.75
+"Figure 4a","Carbon-based final energy: Fossils - Gases","REMIND","EJ/yr",11.1,10.53,5.08,2.56
+"Figure 4a","Carbon-based final energy: Fossils - Gases","TIAM-ECN","EJ/yr",12.69,13.72,12.91,7.56
+"Figure 4a","Carbon-based final energy: Fossils - Gases","WITCH","EJ/yr",10.64,8.23,5.4,6.67
+"Figure 4a","Carbon-based final energy: Fossils - Liquids","IMAGE","EJ/yr",21.86,22.02,11.47,4.2
+"Figure 4a","Carbon-based final energy: Fossils - Liquids","PRIMES","EJ/yr",19.05,16.92,8.21,3.56
+"Figure 4a","Carbon-based final energy: Fossils - Liquids","REMIND","EJ/yr",22.85,18.8,8.7,2.96
+"Figure 4a","Carbon-based final energy: Fossils - Liquids","TIAM-ECN","EJ/yr",25.37,23.03,16.35,7.44
+"Figure 4a","Carbon-based final energy: Fossils - Liquids","WITCH","EJ/yr",21.49,16.36,9.82,1.1
+"Figure 4a","Carbon-based final energy: Fossils - Solids","IMAGE","EJ/yr",1.11,0.89,0.51,0.52
+"Figure 4a","Carbon-based final energy: Fossils - Solids","PRIMES","EJ/yr",1.02,0.32,0.07,0.06
+"Figure 4a","Carbon-based final energy: Fossils - Solids","REMIND","EJ/yr",2.04,0.21,0.15,0.13
+"Figure 4a","Carbon-based final energy: Fossils - Solids","TIAM-ECN","EJ/yr",0.73,1.83,0.74,0.02
+"Figure 4a","Carbon-based final energy: Fossils - Solids","WITCH","EJ/yr",1.25,1.03,0.84,0.71
+"Figure 4a","Carbon-based final energy: Total","IMAGE","EJ/yr",38.25,34.41,21.93,16.28
+"Figure 4a","Carbon-based final energy: Total","PRIMES","EJ/yr",33.84,28.29,18.15,13.04
+"Figure 4a","Carbon-based final energy: Total","PROMETHEUS","EJ/yr",37.78,27.1,16.89,13.69
+"Figure 4a","Carbon-based final energy: Total","REMIND","EJ/yr",40.96,34.63,19.05,13.13
+"Figure 4a","Carbon-based final energy: Total","TIAM-ECN","EJ/yr",41.45,43.84,34.77,22.53
+"Figure 4a","Carbon-based final energy: Total","WITCH","EJ/yr",37.24,28.02,19.34,17.12
+"Figure 4b","Net energy imports: Electricity","IMAGE","EJ/yr",0.02,0,0,0
+"Figure 4b","Net energy imports: Electricity","PRIMES","EJ/yr",0.11,0,0.01,0
+"Figure 4b","Net energy imports: Electricity","REMIND","EJ/yr",0,0,0,0
+"Figure 4b","Net energy imports: Electricity","TIAM-ECN","EJ/yr",0.06,0.52,0.3,0.6
+"Figure 4b","Net energy imports: Hydrogen","IMAGE","EJ/yr",0,-0.02,0.02,0.04
+"Figure 4b","Net energy imports: Hydrogen","PRIMES","EJ/yr",0,0,0,0
+"Figure 4b","Net energy imports: Hydrogen","REMIND","EJ/yr",0,0.02,0.06,0.19
+"Figure 4b","Net energy imports: Liquids (Synfuel)","REMIND","EJ/yr",0,0.01,0.12,2.22
+"Figure 4b","Net energy imports: Liquids (bio-based)","IMAGE","EJ/yr",0.61,1.16,3.62,5.18
+"Figure 4b","Net energy imports: Liquids (bio-based)","TIAM-ECN","EJ/yr",0.07,0.04,0,0.1
+"Figure 4b","Net energy imports: Biomass","IMAGE","EJ/yr",0.47,2.13,3.25,6.96
+"Figure 4b","Net energy imports: Biomass","PRIMES","EJ/yr",0.17,0.47,0.67,1.29
+"Figure 4b","Net energy imports: Biomass","REMIND","EJ/yr",0.61,0.73,0.88,1.67
+"Figure 4b","Net energy imports: Biomass","TIAM-ECN","EJ/yr",0.19,0,0.01,0.27
+"Figure 4b","Net energy imports: Gas","Historical","EJ/yr",12.64,,,
+"Figure 4b","Net energy imports: Gas","IMAGE","EJ/yr",9.67,4.2,2.14,1.82
+"Figure 4b","Net energy imports: Gas","PRIMES","EJ/yr",11.66,8.86,4.26,1.35
+"Figure 4b","Net energy imports: Gas","PROMETHEUS","EJ/yr",10,6.25,1,-0.4
+"Figure 4b","Net energy imports: Gas","REMIND","EJ/yr",10.35,9.14,3.2,0.9
+"Figure 4b","Net energy imports: Gas","TIAM-ECN","EJ/yr",12.09,12,4,1.01
+"Figure 4b","Net energy imports: Gas","WITCH","EJ/yr",10.25,12.02,4.64,4.16
+"Figure 4b","Net energy imports: Oil","Historical","EJ/yr",19.68,,,
+"Figure 4b","Net energy imports: Oil","IMAGE","EJ/yr",17.53,21.06,11.37,3.94
+"Figure 4b","Net energy imports: Oil","PRIMES","EJ/yr",16.63,14.52,8.25,4.46
+"Figure 4b","Net energy imports: Oil","PROMETHEUS","EJ/yr",19.13,15.49,5.64,1.82
+"Figure 4b","Net energy imports: Oil","REMIND","EJ/yr",21.73,18.04,8.27,2.48
+"Figure 4b","Net energy imports: Oil","TIAM-ECN","EJ/yr",25.58,24.41,16.16,7.15
+"Figure 4b","Net energy imports: Oil","WITCH","EJ/yr",17.88,10.36,6.61,0.68
+"Figure 4b","Net energy imports: Coal","Historical","EJ/yr",2.23,,,
+"Figure 4b","Net energy imports: Coal","IMAGE","EJ/yr",0.76,-0.61,-0.28,-0.06
+"Figure 4b","Net energy imports: Coal","PRIMES","EJ/yr",2.66,0.83,0.05,0.03
+"Figure 4b","Net energy imports: Coal","PROMETHEUS","EJ/yr",1.13,0.17,-0.01,0.23
+"Figure 4b","Net energy imports: Coal","REMIND","EJ/yr",2.18,-0.8,0,0.1
+"Figure 4b","Net energy imports: Coal","TIAM-ECN","EJ/yr",4.23,2.5,0.2,0.06
+"Figure 4b","Net energy imports: Coal","WITCH","EJ/yr",-1.76,1.87,0.24,0.22

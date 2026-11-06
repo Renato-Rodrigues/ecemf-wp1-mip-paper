@@ -1,0 +1,111 @@
+"figure","title","series","unit","2020","2030","2040","2050"
+"SI Figure 2","Electric capacity by source: Coal","Historical","GW",132,,,
+"SI Figure 2","Electric capacity by source: Coal","Historical (5yr average)","GW",132,,,
+"SI Figure 2","Electric capacity by source: Coal","Euro-Calliope","GW",126,,,0
+"SI Figure 2","Electric capacity by source: Coal","IMAGE","GW",268,137,22,23
+"SI Figure 2","Electric capacity by source: Coal","LIMES","GW",122,18,2,2
+"SI Figure 2","Electric capacity by source: Coal","MEESA","GW",137,58,13,1
+"SI Figure 2","Electric capacity by source: Coal","OSeMBE","GW",163,64,20,6
+"SI Figure 2","Electric capacity by source: Coal","PROMETHEUS","GW",140,56,5,2
+"SI Figure 2","Electric capacity by source: Coal","REMIND","GW",120,7,0,0
+"SI Figure 2","Electric capacity by source: Coal","TIAM-ECN","GW",155,96,63,11
+"SI Figure 2","Electric capacity by source: Coal","WITCH","GW",142,100,73,53
+"SI Figure 2","Electric capacity by source: Oil","Historical","GW",30,,,
+"SI Figure 2","Electric capacity by source: Oil","Historical (5yr average)","GW",29,,,
+"SI Figure 2","Electric capacity by source: Oil","IMAGE","GW",83,56,18,19
+"SI Figure 2","Electric capacity by source: Oil","LIMES","GW",20,19,0,0
+"SI Figure 2","Electric capacity by source: Oil","MEESA","GW",47,26,9,1
+"SI Figure 2","Electric capacity by source: Oil","OSeMBE","GW",72,80,87,104
+"SI Figure 2","Electric capacity by source: Oil","PROMETHEUS","GW",39,37,6,3
+"SI Figure 2","Electric capacity by source: Oil","REMIND","GW",29,6,0,0
+"SI Figure 2","Electric capacity by source: Oil","TIAM-ECN","GW",50,28,11,0
+"SI Figure 2","Electric capacity by source: Oil","WITCH","GW",26,20,13,8
+"SI Figure 2","Electric capacity by source: Gas","Historical","GW",235,,,
+"SI Figure 2","Electric capacity by source: Gas","Historical (5yr average)","GW",234,,,
+"SI Figure 2","Electric capacity by source: Gas","Euro-Calliope","GW",77,,,3
+"SI Figure 2","Electric capacity by source: Gas","IMAGE","GW",231,131,79,130
+"SI Figure 2","Electric capacity by source: Gas","LIMES","GW",184,176,122,42
+"SI Figure 2","Electric capacity by source: Gas","MEESA","GW",183,230,425,596
+"SI Figure 2","Electric capacity by source: Gas","OSeMBE","GW",238,210,247,252
+"SI Figure 2","Electric capacity by source: Gas","PROMETHEUS","GW",225,111,58,32
+"SI Figure 2","Electric capacity by source: Gas","REMIND","GW",275,173,108,49
+"SI Figure 2","Electric capacity by source: Gas","TIAM-ECN","GW",259,225,213,221
+"SI Figure 2","Electric capacity by source: Gas","WITCH","GW",203,167,106,67
+"SI Figure 2","Electric capacity by source: Biomass","Historical","GW",36,,,
+"SI Figure 2","Electric capacity by source: Biomass","Historical (5yr average)","GW",36,,,
+"SI Figure 2","Electric capacity by source: Biomass","Euro-Calliope","GW",30,,,38
+"SI Figure 2","Electric capacity by source: Biomass","IMAGE","GW",91,108,131,185
+"SI Figure 2","Electric capacity by source: Biomass","LIMES","GW",37,40,53,62
+"SI Figure 2","Electric capacity by source: Biomass","MEESA","GW",36,34,58,69
+"SI Figure 2","Electric capacity by source: Biomass","OSeMBE","GW",38,88,127,164
+"SI Figure 2","Electric capacity by source: Biomass","PROMETHEUS","GW",50,85,108,247
+"SI Figure 2","Electric capacity by source: Biomass","REMIND","GW",35,42,26,11
+"SI Figure 2","Electric capacity by source: Biomass","TIAM-ECN","GW",45,50,73,170
+"SI Figure 2","Electric capacity by source: Biomass","WITCH","GW",15,12,9,6
+"SI Figure 2","Electric capacity by source: Nuclear","Historical","GW",114,,,
+"SI Figure 2","Electric capacity by source: Nuclear","Historical (5yr average)","GW",114,,,
+"SI Figure 2","Electric capacity by source: Nuclear","Euro-Calliope","GW",114,,,88
+"SI Figure 2","Electric capacity by source: Nuclear","IMAGE","GW",116,114,137,103
+"SI Figure 2","Electric capacity by source: Nuclear","LIMES","GW",114,89,76,61
+"SI Figure 2","Electric capacity by source: Nuclear","MEESA","GW",117,101,71,46
+"SI Figure 2","Electric capacity by source: Nuclear","OSeMBE","GW",115,109,94,91
+"SI Figure 2","Electric capacity by source: Nuclear","PROMETHEUS","GW",116,90,66,50
+"SI Figure 2","Electric capacity by source: Nuclear","REMIND","GW",115,87,55,30
+"SI Figure 2","Electric capacity by source: Nuclear","TIAM-ECN","GW",125,95,66,39
+"SI Figure 2","Electric capacity by source: Nuclear","WITCH","GW",116,121,102,75
+"SI Figure 2","Electric capacity by source: Hydro","Historical","GW",131,,,
+"SI Figure 2","Electric capacity by source: Hydro","Historical (5yr average)","GW",131,,,
+"SI Figure 2","Electric capacity by source: Hydro","Euro-Calliope","GW",87,,,87
+"SI Figure 2","Electric capacity by source: Hydro","IMAGE","GW",209,266,330,318
+"SI Figure 2","Electric capacity by source: Hydro","LIMES","GW",130,195,201,200
+"SI Figure 2","Electric capacity by source: Hydro","MEESA","GW",168,170,190,190
+"SI Figure 2","Electric capacity by source: Hydro","OSeMBE","GW",170,171,169,160
+"SI Figure 2","Electric capacity by source: Hydro","PROMETHEUS","GW",206,204,203,201
+"SI Figure 2","Electric capacity by source: Hydro","REMIND","GW",137,149,153,155
+"SI Figure 2","Electric capacity by source: Hydro","TIAM-ECN","GW",190,190,231,280
+"SI Figure 2","Electric capacity by source: Hydro","WITCH","GW",131,139,150,158
+"SI Figure 2","Electric capacity by source: Wind","Historical","GW",202,,,
+"SI Figure 2","Electric capacity by source: Wind","Historical (5yr average)","GW",204,,,
+"SI Figure 2","Electric capacity by source: Wind","Euro-Calliope","GW",202,,,2166
+"SI Figure 2","Electric capacity by source: Wind","IMAGE","GW",206,334,912,1169
+"SI Figure 2","Electric capacity by source: Wind","LIMES","GW",201,490,816,955
+"SI Figure 2","Electric capacity by source: Wind","MEESA","GW",207,448,735,932
+"SI Figure 2","Electric capacity by source: Wind","OSeMBE","GW",211,445,954,1300
+"SI Figure 2","Electric capacity by source: Wind","PROMETHEUS","GW",206,660,884,934
+"SI Figure 2","Electric capacity by source: Wind","REMIND","GW",206,482,902,1207
+"SI Figure 2","Electric capacity by source: Wind","TIAM-ECN","GW",209,331,1007,1487
+"SI Figure 2","Electric capacity by source: Wind","WITCH","GW",204,424,935,1305
+"SI Figure 2","Electric capacity by source: Solar","Historical","GW",149,,,
+"SI Figure 2","Electric capacity by source: Solar","Historical (5yr average)","GW",156,,,
+"SI Figure 2","Electric capacity by source: Solar","Euro-Calliope","GW",138,,,1344
+"SI Figure 2","Electric capacity by source: Solar","IMAGE","GW",154,731,1789,1808
+"SI Figure 2","Electric capacity by source: Solar","LIMES","GW",151,824,1769,2420
+"SI Figure 2","Electric capacity by source: Solar","MEESA","GW",154,511,1013,1310
+"SI Figure 2","Electric capacity by source: Solar","OSeMBE","GW",149,633,1292,1787
+"SI Figure 2","Electric capacity by source: Solar","PROMETHEUS","GW",156,608,1065,1536
+"SI Figure 2","Electric capacity by source: Solar","REMIND","GW",159,974,2051,2506
+"SI Figure 2","Electric capacity by source: Solar","TIAM-ECN","GW",213,902,1600,2300
+"SI Figure 2","Electric capacity by source: Solar","WITCH","GW",199,526,1017,1497
+"SI Figure 2","Electric capacity by source: Geothermal","Historical","GW",1,,,
+"SI Figure 2","Electric capacity by source: Geothermal","Historical (5yr average)","GW",1,,,
+"SI Figure 2","Electric capacity by source: Geothermal","IMAGE","GW",0,0,0,0
+"SI Figure 2","Electric capacity by source: Geothermal","OSeMBE","GW",2,2,5,7
+"SI Figure 2","Electric capacity by source: Geothermal","REMIND","GW",2,2,4,5
+"SI Figure 2","Electric capacity by source: Geothermal","TIAM-ECN","GW",6,8,15,31
+"SI Figure 2","Electric capacity by source: Hydrogen","Euro-Calliope","GW",0,,,0
+"SI Figure 2","Electric capacity by source: Hydrogen","IMAGE","GW",0,0,26,31
+"SI Figure 2","Electric capacity by source: Hydrogen","LIMES","GW",0,8,84,181
+"SI Figure 2","Electric capacity by source: Hydrogen","REMIND","GW",0,3,125,239
+"SI Figure 2","Electric capacity by source: Hydrogen","TIAM-ECN","GW",0,0,0,0
+"SI Figure 2","Electric capacity by source: Other","IMAGE","GW",3,3,190,213
+"SI Figure 2","Electric capacity by source: Other","LIMES","GW",19,7,2,0
+"SI Figure 2","Electric capacity by source: Other","MEESA","GW",63,45,27,15
+"SI Figure 2","Electric capacity by source: Total","Euro-Calliope","GW",821,,,3800
+"SI Figure 2","Electric capacity by source: Total","IMAGE","GW",1360,1879,3634,4000
+"SI Figure 2","Electric capacity by source: Total","LIMES","GW",979,1866,3125,3924
+"SI Figure 2","Electric capacity by source: Total","MEESA","GW",1113,1624,2541,3161
+"SI Figure 2","Electric capacity by source: Total","OSeMBE","GW",1158,1803,2994,3871
+"SI Figure 2","Electric capacity by source: Total","PROMETHEUS","GW",1138,1851,2394,3006
+"SI Figure 2","Electric capacity by source: Total","REMIND","GW",1078,1926,3424,4201
+"SI Figure 2","Electric capacity by source: Total","TIAM-ECN","GW",1254,1926,3279,4539
+"SI Figure 2","Electric capacity by source: Total","WITCH","GW",1035,1508,2404,3168

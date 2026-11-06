@@ -1,0 +1,22 @@
+"figure","title","series","unit","2015","2020","2025","2030","2035","2040","2045","2050"
+"Figure 6a","Carbon price","median","EUR/tCO2",9,26,78,166,253,336,427,559
+"Figure 6a","Carbon price","IMAGE","EUR/tCO2",0,0,0,112,224,336,448,559
+"Figure 6a","Carbon price","LIMES","EUR/tCO2",9,25,80,144,208,272,336,400
+"Figure 6a","Carbon price","MEESA","EUR/tCO2",,26,89,224,316,407,499,591
+"Figure 6a","Carbon price","OSeMBE","EUR/tCO2",,,74,106,188,270,352,434
+"Figure 6a","Carbon price","PRIMES","EUR/tCO2",8,26,133,225,318,410,502,615
+"Figure 6a","Carbon price","PROMETHEUS","EUR/tCO2",8,28,78,166,253,330,409,471
+"Figure 6a","Carbon price","REMIND","EUR/tCO2",18,26,161,296,340,383,427,470
+"Figure 6a","Carbon price","TIAM-ECN","EUR/tCO2",,50,70,130,180,280,420,600
+"Figure 6a","Carbon price","WITCH","EUR/tCO2",10,30,78,182,412,634,818,873
+"Figure 6b","Mitigation costs","IMAGE","% of GDP",,,,,,,,0.32
+"Figure 6b","Mitigation costs","PRIMES","% of GDP",,,,,,,,1.06
+"Figure 6b","Mitigation costs","PROMETHEUS","% of GDP",,,,,,,,0.49
+"Figure 6b","Mitigation costs","REMIND","% of GDP",,,,,,,,1.19
+"Figure 6b","Mitigation costs","TIAM-ECN","% of GDP",,,,,,,,0.79
+"Figure 6b","Mitigation costs","WITCH","% of GDP",,,,,,,,1.23
+"Figure 6b","Mitigation costs","box plot: Minimum","% of GDP",,,,,,,,0.32
+"Figure 6b","Mitigation costs","box plot: 25th percentile","% of GDP",,,,,,,,0.56
+"Figure 6b","Mitigation costs","box plot: Median","% of GDP",,,,,,,,0.93
+"Figure 6b","Mitigation costs","box plot: 75th percentile","% of GDP",,,,,,,,1.16
+"Figure 6b","Mitigation costs","box plot: Maximum","% of GDP",,,,,,,,1.23
