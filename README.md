@@ -163,6 +163,7 @@ Every quantitative result of the paper is reproduced by the single render comman
 | SI Figure 1 | chunk `secondary_energy_electricity_stacked` | `output/*/SI Figure 1. Electricity generation.*` |
 | SI Figure 2 | chunk `capacity_electricity_stacked` | `output/*/SI Figure 2. Capacity mix of power plants.*` |
 | SI Figure 3 | chunk `carbon_capture_origin_stacked` | `output/*/SI Figure 3. Carbon Capture by origin of carbon.*` |
+| Research Briefing Figure | chunk `research_briefing_figure` | `output/*/Research Briefing Figure.*` |
 
 Re-running the models themselves is not needed to reproduce the paper. To regenerate the REMIND scenarios, see the next section.
 

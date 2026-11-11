@@ -2034,3 +2034,247 @@ g[["capacity_electricity_stacked"]]
 g[["carbon_capture_origin_stacked"]]
 ```
 
+### Research Briefing Figure
+
+```{r research_briefing_figure, echo=FALSE, fig.width=115/25.4, fig.height=85/25.4, out.width="115mm"}
+
+# Panel (a): Share of electricity and hydrogen in final energy consumption (as Fig. 3)
+plotDataRaw_briefing_a <- df %>%
+  filter(variable %in% c("Final Energy|Electricity Share woBunkers woNonEnergy", "Final Energy|Hydrogen Share woBunkers woNonEnergy"),
+         period >= 2010, period <= 2050,
+         scenario %in% c("WP1 NetZero"),
+         model %in% modelsFullSystem, 
+         region == "EU27 & UK (*)") %>%
+  rbind(
+    histData %>%
+      filter(variable == "Final Energy|Electricity Share woBunkers woNonEnergy",
+             region == "EUR",
+             period >= 2000,
+             model == "IEA") %>%
+      mutate(variable = "Final Energy|Electricity Share woBunkers woNonEnergy",
+             model = "Historical")
+  ) %>%
+  mutate(value = value * 100)
+
+plotData_briefing_a <- plotDataRaw_briefing_a %>%
+  rbind(
+    plotDataRaw_briefing_a %>%
+      filter(model != "Historical") %>%
+      group_by(scenario, region, variable, unit, period) %>%
+      summarise(median_value = median(value, na.rm = TRUE), .groups = "drop") %>%
+      rename(value = median_value) %>%
+      mutate(model = "median") %>%
+      select(all_of(names(plotDataRaw_briefing_a)))
+  ) %>%
+  mutate(model = factor(model, levels = rev(modelsOrder)),
+         carrier = ifelse(variable == "Final Energy|Electricity Share woBunkers woNonEnergy", "Electricity", "Hydrogen")
+  )
+
+# Panel (b): Share of wind and solar in total electricity generation (as Fig. 2b)
+plotDataRaw_briefing_b <- df %>%
+  filter(variable == "Secondary Energy|Electricity|VRE Share",
+         period >= 2010, period <= 2050,
+         scenario %in% c("WP1 NetZero"),
+         model %in% modelsElecall, 
+         region == "EU27 & UK (*)") %>%
+  rbind(
+    histData %>%
+      filter(variable == "SE|Electricity|VRE Share",
+             region == "EUR",
+             period >= 2000,
+             model == "Ember") %>%
+      mutate(variable = "Secondary Energy|Electricity|VRE Share",
+             model = "Historical")
+  ) %>%
+  mutate(value = value * 100)
+
+plotData_briefing_b <- plotDataRaw_briefing_b %>%
+  rbind(
+    plotDataRaw_briefing_b %>%
+      filter(!model %in% c("Historical", "Euro-Calliope")) %>%
+      group_by(scenario, region, variable, unit, period) %>%
+      summarise(median_value = median(value, na.rm = TRUE), .groups = "drop") %>%
+      rename(value = median_value) %>%
+      mutate(model = "median") %>%
+      select(all_of(names(plotDataRaw_briefing_b)))
+  ) %>%
+  mutate(model = factor(model, levels = rev(modelsOrder)))
+
+theme_briefing <- function() {
+  theme_minimal(base_size = 7) +
+    theme(
+      panel.background = element_rect(fill = "white", colour = NA),
+      panel.grid.major = element_line(colour = "grey90", linewidth = 0.3),
+      panel.grid.minor = element_line(colour = "grey95", linewidth = 0.2),
+      plot.background = element_rect(fill = "#FFFFFF", color = NA),
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor.x = element_blank(),
+      plot.margin = margin(t = 2, r = 4, b = 2, l = 4, unit = "pt"),
+      axis.ticks = element_line(colour = "black", linewidth = 0.3),
+      axis.ticks.length = unit(2, "pt"),
+      axis.title = element_blank(),
+      axis.text = element_text(size = 5.5, colour = "black"),
+      plot.title = element_text(size = 6.0, face = "bold", hjust = 0, margin = margin(t = 2, b = 1, unit = "pt"), colour = "black"),
+      plot.subtitle = element_text(size = 5.2, face = "plain", hjust = 0, margin = margin(b = 4, unit = "pt"), colour = "grey50"),
+      legend.position = "bottom",
+      legend.box = "vertical",
+      legend.title = element_blank(),
+      legend.text = element_text(size = 5.2, colour = "black"),
+      legend.key.size = unit(6, "pt"),
+      legend.key.width = unit(10, "pt"),
+      legend.margin = margin(t = 0, b = 0, unit = "pt"),
+      legend.box.margin = margin(t = 0, b = 0, unit = "pt"),
+      strip.background = element_rect(fill = "white", colour = NA),
+      strip.text = element_blank()
+    )
+}
+
+def_briefing <- list(
+  grid = list(lineSize = 0.3, color = "grey90", linetype = "dashed"),
+  yAxis = list(linewidth = 0.5, alpha = 0.3),
+  hist = list(lineSize = 0.7, areaColor = "#eeeeee", alpha = 0.5),
+  model = list(lineSize = 0.4, pointSize = 0.7, pointStroke = 0.5, shape = 21),
+  median = list(lineSize = 0.8, pointSize = 0.9, pointStroke = 0.6, shape = 21)
+)
+
+briefing_histEnd <- function(d, fallback = 2024) {
+  h <- d %>% filter(model == "Historical") %>% pull(period)
+  if (length(h) == 0) fallback else max(h, na.rm = TRUE)
+}
+
+p_briefing_a <- ggplot(plotData_briefing_a, aes(x = period, y = value)) +
+  geom_segment(data = plotData_briefing_a %>% filter(period %% 10 == 0), aes(x = period, xend = period, y = 0, yend = value),
+               color = def_briefing$grid$color, linewidth = def_briefing$grid$lineSize, linetype = def_briefing$grid$linetype) +
+  annotate("rect", xmin = -Inf, xmax = briefing_histEnd(plotData_briefing_a), ymin = -Inf, ymax = Inf, fill = def_briefing$hist$areaColor, alpha = def_briefing$hist$alpha) +
+  annotate("text", x = 2012, y = 50, label = "Historical", hjust = 0.5, vjust = 0.5, size = 4.5 / .pt, color = "#888888") +
+  geom_hline(yintercept = 0, color = "black", linewidth = def_briefing$yAxis$linewidth, alpha = def_briefing$yAxis$alpha) +
+  geom_line(data = plotData_briefing_a %>% filter((!(model %in% c("Historical", "median")))),
+            linewidth = def_briefing$model$lineSize, aes(color = model, linetype = carrier, alpha = model),
+            show.legend = c(linetype = FALSE, colour = TRUE)) +
+  geom_point(data = plotData_briefing_a %>% filter(!(model %in% c("Historical", "median")), period > 2023),
+             shape = def_briefing$model$shape, aes(colour = model), fill = "white",
+             size = def_briefing$model$pointSize, stroke = def_briefing$model$pointStroke) +
+  geom_line(data = plotData_briefing_a %>% filter(model == "median"),
+            linewidth = def_briefing$median$lineSize, aes(color = model, linetype = carrier, alpha = model)) +
+  geom_point(data = plotData_briefing_a %>% filter(model == "median"), shape = def_briefing$median$shape, aes(colour = model, shape = model),
+             fill = "white", size = def_briefing$median$pointSize, stroke = def_briefing$median$pointStroke) +
+  geom_line(data = plotData_briefing_a %>% filter(model == "Historical"),
+            linewidth = def_briefing$model$lineSize, aes(color = model, alpha = model), linetype = "solid") +
+  theme_briefing() +
+  scale_color_manual(name = "legend", values = setNames(color[levels(plotData_briefing_a$model)], levels(plotData_briefing_a$model))) +
+  scale_alpha_manual(values = modelAlpha) +
+  scale_linetype_manual(name = "Carrier", values = c("Electricity" = "solid", "Hydrogen" = "33")) +
+  labs(title = "(a) Share of electricity and hydrogen\nin final energy consumption", subtitle = "%") +
+  scale_x_continuous(expand = c(0, 0), breaks = seq(2000, 2050, by = 10)) +
+  coord_cartesian(clip = 'off') +
+  expand_limits(y = c(0, 75)) +
+  scale_y_continuous(breaks = seq(0, 70, by = 10), limits = c(0, 75)) +
+  guides(
+    color = "none",
+    linetype = guide_legend(
+      nrow = 1,
+      keywidth = unit(24, "pt"),
+      override.aes = list(linewidth = 0.9, linetype = c("solid", "33"))
+    ),
+    alpha = "none",
+    shape = "none"
+  )
+
+p_briefing_b <- ggplot(plotData_briefing_b, aes(x = period, y = value)) +
+  geom_segment(data = plotData_briefing_b %>% filter(period %% 10 == 0), aes(x = period, xend = period, y = 0, yend = value),
+               color = def_briefing$grid$color, linewidth = def_briefing$grid$lineSize, linetype = def_briefing$grid$linetype) +
+  annotate("rect", xmin = -Inf, xmax = briefing_histEnd(plotData_briefing_b), ymin = -Inf, ymax = Inf, fill = def_briefing$hist$areaColor, alpha = def_briefing$hist$alpha) +
+  annotate("text", x = 2012, y = 50, label = "Historical", hjust = 0.5, vjust = 0.5, size = 4.5 / .pt, color = "#888888") +
+  geom_hline(yintercept = 0, color = "black", linewidth = def_briefing$yAxis$linewidth, alpha = def_briefing$yAxis$alpha) +
+  geom_line(data = plotData_briefing_b %>% filter((!(model %in% c("Historical", "median", "Euro-Calliope")))),
+            linewidth = def_briefing$model$lineSize, aes(color = model, linetype = model, alpha = model)) +
+  geom_point(data = plotData_briefing_b %>% filter(period > 2023, !model %in% c("median", "Euro-Calliope")),
+             aes(colour = model, shape = model), fill = "white",
+             size = def_briefing$model$pointSize, stroke = def_briefing$model$pointStroke) +
+  geom_point(data = plotData_briefing_b %>% filter(model == "Euro-Calliope", period %in% c(2020, 2050)),
+             aes(colour = model, shape = model), fill = "white",
+             size = def_briefing$model$pointSize, stroke = def_briefing$model$pointStroke) +
+  geom_line(data = plotData_briefing_b %>% filter(model == "median"),
+            linewidth = def_briefing$median$lineSize, aes(color = model, linetype = model, alpha = model)) +
+  geom_point(data = plotData_briefing_b %>% filter(model == "median"), aes(colour = model, shape = model),
+             fill = "white", size = def_briefing$median$pointSize, stroke = def_briefing$median$pointStroke) +
+  geom_line(data = plotData_briefing_b %>% filter(model == "Historical"),
+            linewidth = def_briefing$model$lineSize, aes(color = model, linetype = model, alpha = model)) +
+  theme_briefing() +
+  scale_color_manual(name = "legend", values = setNames(color[levels(plotData_briefing_b$model)], levels(plotData_briefing_b$model)), guide = guide_legend(nrow = 2)) +
+  scale_alpha_manual(values = modelAlpha) +
+  scale_linetype_manual(values = modelLinetype) +
+  scale_shape_manual(name = "legend", values = modelShape, guide = guide_legend(nrow = 2)) +
+  labs(title = "(b) Share of wind and solar\nin total electricity generation", subtitle = "%") +
+  scale_x_continuous(expand = c(0, 0), breaks = seq(2000, 2050, by = 10)) +
+  scale_y_continuous(breaks = seq(0, 100, by = 20), limits = c(0, 100), expand = c(0, 0)) +
+  coord_cartesian(clip = 'off') +
+  expand_limits(y = c(0, 100)) +
+  guides(linetype = "none", alpha = "none")
+
+# Extract legends
+leg_models <- g_legend(p_briefing_b + guides(color = guide_legend(nrow = 2), shape = guide_legend(nrow = 2)) +
+                         theme(legend.margin = margin(0,0,0,0), legend.box.margin = margin(0,0,0,0)))
+leg_carrier <- g_legend(p_briefing_a + theme(legend.margin = margin(0,0,0,0), legend.box.margin = margin(0,0,0,0)))
+
+leg_combined <- gridExtra::arrangeGrob(leg_carrier, leg_models, ncol = 1, heights = c(1, 2))
+
+g[["Research Briefing Figure"]] <- gridExtra::arrangeGrob(
+  p_briefing_a + theme(legend.position = "none", plot.margin = margin(t = 2, r = 8, b = 2, l = 4, unit = "pt")),
+  p_briefing_b + theme(legend.position = "none", plot.margin = margin(t = 2, r = 4, b = 2, l = 8, unit = "pt")),
+  leg_combined,
+  layout_matrix = rbind(c(1, 2),
+                        c(1, 2),
+                        c(1, 2),
+                        c(1, 2),
+                        c(3, 3)),
+  heights = c(1, 1, 1, 1, 1.1)
+)
+
+# Save in png, svg, pdf (exact dimensions: 115mm width x 85mm height)
+ggsave(paste0(outFolder, "/png/Research Briefing Figure.png"), g[["Research Briefing Figure"]], device = "png", width = 115, height = 85, units = "mm", dpi = 300)
+ggsave(paste0(outFolder, "/svg/Research Briefing Figure.svg"), g[["Research Briefing Figure"]], device = "svg", width = 115, height = 85, units = "mm", dpi = 100)
+temp_pdf <- tempfile(fileext = ".pdf")
+cairo_pdf(temp_pdf, width = 115 / 25.4, height = 85 / 25.4)
+grid.draw(g[["Research Briefing Figure"]])
+dev.off()
+copied <- file.copy(temp_pdf, paste0(outFolder, "/pdf/Research Briefing Figure.pdf"), overwrite = TRUE)
+if (!copied) {
+  file.copy(temp_pdf, paste0(outFolder, "/pdf/Research Briefing Figure_updated.pdf"), overwrite = TRUE)
+  warning("Could not overwrite output/pdf/Research Briefing Figure.pdf (it may be open in a PDF reader like Acrobat). Saved copy to output/pdf/Research Briefing Figure_updated.pdf.")
+}
+unlink(temp_pdf)
+
+# Save data to CSV
+d_briefing_a <- plotData_briefing_a %>%
+  distinct() %>%
+  mutate(figure = "Research Briefing Figure a",
+         title = paste("Share of", tolower(carrier), "in final energy consumption"),
+         series = as.character(model),
+         unit = "%",
+         period = as.numeric(as.character(period)),
+         value = round(value, 1)) %>%
+  select(figure, title, series, unit, period, value)
+
+d_briefing_b <- plotData_briefing_b %>%
+  filter(model != "Euro-Calliope" | period %in% c(2020, 2050)) %>%
+  distinct() %>%
+  mutate(figure = "Research Briefing Figure b",
+         title = "Share of wind and solar in total electricity generation",
+         series = as.character(model),
+         unit = "%",
+         period = as.numeric(as.character(period)),
+         value = round(value, 1)) %>%
+  select(figure, title, series, unit, period, value)
+
+d_briefing <- bind_rows(d_briefing_a, d_briefing_b) %>%
+  mutate(series = factor(series, levels = unique(c(seriesOrder, series)))) %>%
+  arrange(figure, title, series, period) %>%
+  pivot_wider(names_from = period, values_from = value)
+write.csv(d_briefing, paste0(outFolder, "/csv/Research Briefing Figure.csv"), row.names = FALSE, na = "")
+
+grid.newpage()
+grid.draw(g[["Research Briefing Figure"]])
+```
+
+
