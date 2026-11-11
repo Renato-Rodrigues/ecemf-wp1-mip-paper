@@ -25,7 +25,7 @@ data/historical.mif              historical data (UNFCCC, Ember, IEA, IRENA, BP;
 prepare_data.R                   reads both files and derives the variables the figures need
 paperFigures.Rmd                 results table, then the nine published figures
 paperFigures.html                rendered output of paperFigures.Rmd (results table plus figures)
-output/png, output/svg           the figures, written on every render
+output/png, output/svg, output/pdf the figures, written on every render
 output/Figures.pdf               all figures in vector format, one page per figure
 output/csv                       one csv per figure with the data it plots (long format: figure,
                                  panel, model, scenario, region, variable, category, unit, period, value)
@@ -123,7 +123,7 @@ Rscript -e 'rmarkdown::render("paperFigures.Rmd")'
 ### Expected output
 
 - `paperFigures.html`: the table *"Result values quoted in the manuscript and Supplementary Information"* (min, quartiles, median and max across models for every quantitative statement in the paper), followed by all figures.
-- `output/png/*.png` and `output/svg/*.svg`: the nine figures listed below (18 files).
+- `output/png/*.png`, `output/svg/*.svg` and `output/pdf/*.pdf`: the nine figures listed below (27 files).
 
 Check against the first table rows: the GHG emission reduction vs 1990 (2030-target accounting) has a median of **85 %** in 2040 (interquartile range 83–86 %) and **100 %** in 2050. The table in a fresh render is identical to the committed `paperFigures.html`. Figure files may differ byte-wise across `svglite`/graphics-device versions (anti-aliasing, SVG markup) but are visually identical.
 

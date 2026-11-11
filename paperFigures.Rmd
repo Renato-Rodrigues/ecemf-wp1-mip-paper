@@ -49,6 +49,7 @@ histData <- histOrigN
 outFolder <- "./output"
 dir.create(paste0(outFolder, "/png"), recursive = TRUE, showWarnings = FALSE)
 dir.create(paste0(outFolder, "/svg"), recursive = TRUE, showWarnings = FALSE)
+dir.create(paste0(outFolder, "/pdf"), recursive = TRUE, showWarnings = FALSE)
 
 df <- df %>% filter(!(model == "Euro-Calliope" & period == 2030))
 convertEJ2TWh <- 277.7777778
@@ -525,6 +526,7 @@ histEnd <- function(d, fallback = 2024) {
 
 dir.create(paste0(outFolder, "/png"), showWarnings = FALSE, recursive = TRUE)
 dir.create(paste0(outFolder, "/svg"), showWarnings = FALSE, recursive = TRUE)
+dir.create(paste0(outFolder, "/pdf"), showWarnings = FALSE, recursive = TRUE)
 
 ```
 
@@ -1752,11 +1754,14 @@ plotData_SEE_Total <- plotData_SEE_Total %>%
 g[["secondary_energy_electricity_stacked"]] <- ggplot(plotData_SEE) +
   geom_hline(yintercept = 0, color = "black", linewidth = 1, alpha = 0.5) +
   geom_bar(aes(x = model, y = value, fill = category), stat = 'identity', alpha = 0.8) +
-  geom_point(data = plotData_SEE_Total, aes(x = model, y = value), colour = "black", size = 3, shape = 18) +
+  geom_point(data = plotData_SEE_Total, aes(x = model, y = value, shape = "Total"), colour = "black", size = 3) +
   theme_paper() +
   facet_wrap(~period, nrow = 1, scales = "free_x") +
   scale_x_discrete(limits = orderElecModels) +
   scale_fill_manual(values = elec_colors) +
+  scale_shape_manual(name = NULL, values = c("Total" = 18)) +
+  guides(fill = guide_legend(order = 1),
+         shape = guide_legend(order = 2, override.aes = list(size = 3, colour = "black", shape = 18))) +
   coord_cartesian(clip = 'off') +
   theme_stacked() +
   labs(title = "Electricity Generation by Source", subtitle = "TWh/yr") +
@@ -1833,11 +1838,14 @@ plotData_CAP_Total <- plotData_CAP_Total %>%
 g[["capacity_electricity_stacked"]] <- ggplot(plotData_CAP) +
   geom_hline(yintercept = 0, color = "black", linewidth = 1, alpha = 0.5) +
   geom_bar(aes(x = model, y = value, fill = category), stat = 'identity', alpha = 0.8) +
-  geom_point(data = plotData_CAP_Total, aes(x = model, y = value), colour = "black", size = 3, shape = 18) +
+  geom_point(data = plotData_CAP_Total, aes(x = model, y = value, shape = "Total"), colour = "black", size = 3) +
   theme_paper() +
   facet_wrap(~period, nrow = 1, scales = "free_x") +
   scale_x_discrete(limits = orderElecModels) +
   scale_fill_manual(values = cap_elec_colors) +
+  scale_shape_manual(name = NULL, values = c("Total" = 18)) +
+  guides(fill = guide_legend(order = 1),
+         shape = guide_legend(order = 2, override.aes = list(size = 3, colour = "black", shape = 18))) +
   coord_cartesian(clip = 'off') +
   theme_stacked() +
   labs(title = "Electric Capacity by Source", subtitle = "GWe") +
@@ -1901,10 +1909,13 @@ if (nrow(plotData_CC) > 0) {
   g[["carbon_capture_origin_stacked"]] <- ggplot(plotData_CC %>% filter(model != "Euro-Calliope")) +
     geom_hline(yintercept = 0, color = "black", linewidth = 1, alpha = 0.5) +
     geom_bar(aes(x = model, y = value, fill = variable), stat = 'identity', alpha = 0.8) +
-    geom_point(data = plotData_CC_Total %>% filter(model != "Euro-Calliope"), aes(x = model, y = value), colour = "black", size = 3, shape = 18) +
+    geom_point(data = plotData_CC_Total %>% filter(model != "Euro-Calliope"), aes(x = model, y = value, shape = "Total"), colour = "black", size = 3) +
     theme_paper() +
     facet_wrap(~period, nrow = 1) +
     scale_fill_manual(values = cc_colors) +
+    scale_shape_manual(name = NULL, values = c("Total" = 18)) +
+    guides(fill = guide_legend(order = 1),
+           shape = guide_legend(order = 2, override.aes = list(size = 3, colour = "black", shape = 18))) +
     coord_cartesian(clip = 'off') +
     theme_stacked() +
     labs(title = "Carbon Capture by Origin", subtitle = expression(paste("Mt ", CO[2], " /yr")))
@@ -1945,23 +1956,27 @@ for (fig in names(figData)) {
   write.csv(d, paste0(outFolder, "/csv/", csvNames[[fig]], ".csv"), row.names = FALSE, na = "")
 }
 
-# All figures in one vector pdf, one page per figure at its saved size. A pdf device has a
-# single page size, so each figure gets its own file first and qpdf joins them.
+# Vector pdf for each figure at its saved size, with Figure<X> in the file name
+dir.create(paste0(outFolder, "/pdf"), recursive = TRUE, showWarnings = FALSE)
 pdfFigures <- list(
-  list(g[["Figure 1"]], 10), list(g[["Figure 2"]], 6), list(g[["Figure 3"]], 6),
-  list(g[["Figure 4"]], 8), list(g[["Figure 5"]], 10), list(g[["Figure 6"]], 6),
-  list(g[["secondary_energy_electricity_stacked"]], 8), list(g[["capacity_electricity_stacked"]], 8),
-  list(g[["carbon_capture_origin_stacked"]], 8)
+  "Figure 1"    = list(g[["Figure 1"]], 10),
+  "Figure 2"    = list(g[["Figure 2"]], 6),
+  "Figure 3"    = list(g[["Figure 3"]], 6),
+  "Figure 4"    = list(g[["Figure 4"]], 8),
+  "Figure 5"    = list(g[["Figure 5"]], 10),
+  "Figure 6"    = list(g[["Figure 6"]], 6),
+  "SI Figure 1" = list(g[["secondary_energy_electricity_stacked"]], 8),
+  "SI Figure 2" = list(g[["capacity_electricity_stacked"]], 8),
+  "SI Figure 3" = list(g[["carbon_capture_origin_stacked"]], 8)
 )
-pdfPages <- sapply(seq_along(pdfFigures), function(i) {
-  file <- tempfile(fileext = ".pdf")
-  cairo_pdf(file, width = 12, height = pdfFigures[[i]][[2]])
-  grid.draw(if (inherits(pdfFigures[[i]][[1]], "ggplot")) ggplotGrob(pdfFigures[[i]][[1]]) else pdfFigures[[i]][[1]])
+pdfFiles <- sapply(names(pdfFigures), function(fig) {
+  file <- paste0(outFolder, "/pdf/", csvNames[[fig]], ".pdf")
+  cairo_pdf(file, width = 12, height = pdfFigures[[fig]][[2]])
+  grid.draw(if (inherits(pdfFigures[[fig]][[1]], "ggplot")) ggplotGrob(pdfFigures[[fig]][[1]]) else pdfFigures[[fig]][[1]])
   dev.off()
   file
 })
-qpdf::pdf_combine(pdfPages, paste0(outFolder, "/Figures.pdf"))
-unlink(pdfPages)
+qpdf::pdf_combine(pdfFiles, paste0(outFolder, "/Figures.pdf"))
 
 ```
 
